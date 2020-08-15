@@ -15,4 +15,8 @@ def translate(word):
         yn = input("Did you mean {} instead? Enter Y if yes, or N if no: ".format(get_close_matches(word, data.keys())[0]))
         if yn == "Y":
             return data[get_close_matches(word, data.keys())[0]]
+        elif yn == "N":
+            return "The word doesn't exist. Please double check it."
+        else:
+            return "We didn't understand your entry."
 
